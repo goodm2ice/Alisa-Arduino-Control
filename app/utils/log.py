@@ -97,7 +97,7 @@ class GM_Logger(lg.Logger):
         """ Настройка для вывода в файл """
 
         now = datetime.datetime.now()
-        handler = lg.FileHandler(now.strftime(r'./logs/%Y-%m-%d.log'))
+        handler = lg.FileHandler(now.strftime(r'./logs/%Y-%m-%d.log'), encoding='utf-8')
         handler.setLevel(lg.DEBUG)
         hformat = lg.Formatter(
             '%(asctime)s [%(levelname)s] %(name)s: %(message)s')

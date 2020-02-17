@@ -25,7 +25,7 @@ for syn in config["synonims"].values():
 def hasOneOf(arr_base : List[str], arr_find : List[str]) -> bool:
     for elem1 in arr_find:
         for elem2 in arr_base:
-            if lsh.ratio(elem1, elem2) > config["ratios"][elem1]:
+            if lsh.ratio(elem1, elem2) > config["ratios"][elem2]:
                 print(elem1, elem2, lsh.ratio(elem1, elem2))
                 return True
     return False
